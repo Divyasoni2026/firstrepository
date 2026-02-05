@@ -1,0 +1,14 @@
+passwords for AWS:
+
+username: soni.divyasoni3737@gmail.com
+password: divyaparidhi25@A
+
+bucket on s3 name: 
+divya-s3-ar-bucket1
+
+AWS useerID: 264786923025
+Account name: Divya
+
+console sign-in URL: https://264786923025.signin.aws.amazon.com/console
+user name : DivyaAR
+console password: divyaparidhi25@A

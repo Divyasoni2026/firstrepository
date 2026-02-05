@@ -1,0 +1,41 @@
+first download and install my-sql-connector *.jar file.
+
+//for adding driver to the java code
+class.forName("com.sql.cj.jdbc.Drivers");
+
+//for creating connection object
+url="jdbc:mysql://localhost:3303/jbcd_db"   ;
+<jdbc:mysql://loalhost:<portnumber>>//<databasename>
+
+uname="admin"
+pwrd="root"
+
+connection conn=DriverManager.getConnection(url ,uname,pwrd);
+
+//create preparestatement object to execute the queries
+
+PreparedStatement ps= prepareStatement(query);
+ps.setString(1,"val"); //value will be placed in the number Question mark
+ps.setString(2,"val"); //same as above we have to use setString for the time ? appered in the query
+
+//now after prepare the query statement we have to use the executeQuery() <for select query only> and executeUpdate() <for delete,insert and update query>
+
+pw.executeQuery();
+//when we do the select query it will return the objects from the data base which we have to receive in a resultSet object as:
+resultSet rs= pw.executeQuery();
+//resultSet hav a .next() method to read the data from resultset as:
+while(rs.next())
+{
+string s1=rs.getString("colname");
+system.out.println(s1);
+}
+OR
+pw.executeUpdate();
+//now executeUpdate () will also return the number of affected rows which we can get in the object on the left of this statement. eg: [int rownum= pw.executeUpdate();]
+
+
+//commiting the changes
+conn.commit();
+
+//finally closing the connection
+conn.close();
